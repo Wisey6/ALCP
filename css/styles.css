@@ -203,6 +203,10 @@ section {
   color: var(--color-white);
 }
 
+.section--green {
+  background-color: var(--color-bg-green);
+}
+
 .section--dark h2,
 .section--dark h3,
 .section--dark h4 {
