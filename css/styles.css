@@ -5,19 +5,19 @@
 
 /* --- Custom Properties --- */
 :root {
-  /* Colors — Calming Green Palette */
-  --color-primary: #5B8C5A;          /* sage green — calming, therapeutic */
-  --color-primary-dark: #3D6B3C;     /* deep forest */
-  --color-primary-light: #7BAD7A;    /* soft leaf */
+  /* Colors — Deep Forest Green (matched to brain icon) */
+  --color-primary: #1A4332;          /* the deep green from the brain icon */
+  --color-primary-dark: #122E23;     /* even deeper for hovers */
+  --color-primary-light: #2D6A4F;    /* medium green for links, accents */
   --color-accent: #C8A96E;           /* warm gold */
   --color-accent-light: #DBC48E;     /* light gold */
-  --color-bg: #F8FAF7;              /* barely-green white */
-  --color-bg-alt: #EFF3EC;          /* soft sage tint */
-  --color-bg-green: #E4EDE2;        /* light green wash */
-  --color-text: #2C3E2D;            /* dark green-black */
-  --color-text-muted: #6B7D6C;      /* muted sage */
+  --color-bg: #F7FAF8;              /* barely-green white */
+  --color-bg-alt: #EBF2ED;          /* soft green tint */
+  --color-bg-green: #DCE8DE;        /* light green wash */
+  --color-text: #1A2E1F;            /* dark green-black */
+  --color-text-muted: #5A7060;      /* muted forest */
   --color-white: #FFFFFF;
-  --color-border: #D5DED4;          /* green-tinted border */
+  --color-border: #CEDBD1;          /* green-tinted border */
   --color-alert: #B8860B;
   --color-alert-bg: #FFF8E7;
 
@@ -53,9 +53,9 @@
   --max-width-narrow: 720px;
 
   /* Shadows — warm green-tinted */
-  --shadow-sm: 0 1px 4px rgba(59,107,60,0.06);
-  --shadow-md: 0 4px 16px rgba(59,107,60,0.08);
-  --shadow-lg: 0 8px 30px rgba(59,107,60,0.1);
+  --shadow-sm: 0 1px 4px rgba(26,67,50,0.06);
+  --shadow-md: 0 4px 16px rgba(26,67,50,0.1);
+  --shadow-lg: 0 8px 30px rgba(26,67,50,0.12);
 
   /* Transitions */
   --transition-fast: 200ms ease;
@@ -335,7 +335,7 @@ section {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: rgba(248, 250, 247, 0.95);
+  background-color: rgba(247, 250, 248, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all var(--transition-base);
@@ -347,7 +347,7 @@ section {
 .site-header.scrolled {
   height: var(--header-height-scrolled);
   box-shadow: var(--shadow-sm);
-  background-color: rgba(248, 250, 247, 0.98);
+  background-color: rgba(247, 250, 248, 0.98);
 }
 
 .header-inner {
@@ -504,8 +504,8 @@ section {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(44, 62, 45, 0.45) 0%,
-    rgba(44, 62, 45, 0.65) 100%
+    rgba(26, 67, 50, 0.5) 0%,
+    rgba(26, 67, 50, 0.7) 100%
   );
 }
 
@@ -686,9 +686,9 @@ section {
   inset: 0;
   background: linear-gradient(
     0deg,
-    rgba(44,62,45,0.88) 0%,
-    rgba(44,62,45,0.35) 60%,
-    rgba(44,62,45,0.15) 100%
+    rgba(26,67,50,0.9) 0%,
+    rgba(26,67,50,0.4) 60%,
+    rgba(26,67,50,0.15) 100%
   );
   transition: background var(--transition-base);
 }
@@ -696,9 +696,9 @@ section {
 .therapy-card--featured:hover::before {
   background: linear-gradient(
     0deg,
-    rgba(44,62,45,0.92) 0%,
-    rgba(44,62,45,0.45) 60%,
-    rgba(44,62,45,0.2) 100%
+    rgba(26,67,50,0.95) 0%,
+    rgba(26,67,50,0.5) 60%,
+    rgba(26,67,50,0.25) 100%
   );
 }
 
@@ -887,7 +887,7 @@ section {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(74, 103, 65, 0.15);
+  box-shadow: 0 0 0 3px rgba(26, 67, 50, 0.15);
 }
 
 .form-group input::placeholder,
@@ -903,7 +903,7 @@ section {
 .form-success {
   display: none;
   padding: var(--sp-2) var(--sp-3);
-  background-color: rgba(74, 103, 65, 0.1);
+  background-color: rgba(26, 67, 50, 0.1);
   color: var(--color-primary);
   border-radius: 8px;
   font-weight: 500;
