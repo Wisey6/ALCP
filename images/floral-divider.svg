@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Delicate floral divider -->
+  <g stroke="#D4AFA0" stroke-width="1" stroke-linecap="round" fill="none">
+    <!-- Center flower -->
+    <circle cx="100" cy="25" r="5"/>
+    <circle cx="100" cy="25" r="2" fill="#D4AFA0"/>
+    <path d="M95 25 C93 18, 100 14, 105 18"/>
+    <path d="M105 25 C107 18, 100 14, 95 18"/>
+    <path d="M95 25 C93 32, 100 36, 105 32"/>
+    <path d="M105 25 C107 32, 100 36, 95 32"/>
+    <path d="M100 20 C94 17, 92 22, 95 25"/>
+    <path d="M100 20 C106 17, 108 22, 105 25"/>
+
+    <!-- Left branch -->
+    <path d="M90 25 C70 25, 50 28, 20 25"/>
+    <path d="M65 25 C58 18, 52 20, 55 27"/>
+    <path d="M65 25 C58 32, 52 30, 55 23"/>
+    <path d="M40 25 C35 19, 28 22, 32 27"/>
+    <path d="M40 25 C35 31, 28 28, 32 23"/>
+
+    <!-- Right branch -->
+    <path d="M110 25 C130 25, 150 28, 180 25"/>
+    <path d="M135 25 C142 18, 148 20, 145 27"/>
+    <path d="M135 25 C142 32, 148 30, 145 23"/>
+    <path d="M160 25 C165 19, 172 22, 168 27"/>
+    <path d="M160 25 C165 31, 172 28, 168 23"/>
+  </g>
+</svg>
