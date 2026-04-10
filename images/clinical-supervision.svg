@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <!-- Clinical supervision illustration: Two people in a counselling session -->
+
+  <!-- Left person (client) - seated on bench -->
+  <!-- Head -->
+  <ellipse cx="195" cy="155" rx="38" ry="42" fill="white" stroke="#3D3D3D" stroke-width="3"/>
+  <!-- Hair -->
+  <path d="M157 155c0-25 15-45 38-45s38 20 38 45c0 0-5-30-38-30s-38 30-38 30z" fill="#9E9E9E" stroke="#3D3D3D" stroke-width="2.5"/>
+  <path d="M157 155c-2-10 0-25 5-35" stroke="#3D3D3D" stroke-width="2.5" fill="none"/>
+  <path d="M233 155c2-10 0-25-5-35" stroke="#3D3D3D" stroke-width="2.5" fill="none"/>
+  <!-- Face -->
+  <circle cx="183" cy="152" r="2.5" fill="#3D3D3D"/>
+  <path d="M188 168c4 3 10 3 14 0" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Neck -->
+  <line x1="195" y1="197" x2="195" y2="215" stroke="#3D3D3D" stroke-width="3"/>
+  <!-- Body (blue top) -->
+  <path d="M155 215c0 0 10-3 40-3s40 3 40 3l10 95h-100z" fill="#7FB3D8" stroke="#3D3D3D" stroke-width="3"/>
+  <!-- Arms -->
+  <path d="M160 230c-5 15 0 50 15 60" stroke="#3D3D3D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M230 230c5 15 5 45-5 55" stroke="#3D3D3D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Hands clasped -->
+  <ellipse cx="195" cy="310" rx="15" ry="10" fill="white" stroke="#3D3D3D" stroke-width="2.5"/>
+  <!-- Legs -->
+  <path d="M155 310l-20 65h25l15-55" stroke="#3D3D3D" stroke-width="3" fill="none"/>
+  <path d="M235 310l20 65h-25l-15-55" stroke="#3D3D3D" stroke-width="3" fill="none"/>
+  <!-- Bench/seat -->
+  <rect x="130" y="370" width="130" height="12" rx="3" fill="#9E9E9E" stroke="#3D3D3D" stroke-width="2.5"/>
+  <line x1="145" y1="382" x2="140" y2="420" stroke="#3D3D3D" stroke-width="3"/>
+  <line x1="245" y1="382" x2="250" y2="420" stroke="#3D3D3D" stroke-width="3"/>
+
+  <!-- Right person (therapist) - seated on chair with back -->
+  <!-- Head -->
+  <ellipse cx="420" cy="145" rx="35" ry="40" fill="white" stroke="#3D3D3D" stroke-width="3"/>
+  <!-- Hair (dark, in bun) -->
+  <path d="M385 140c0-25 12-42 35-42s35 17 35 42c0 0-5-28-35-28s-35 28-35 28z" fill="#5D5D5D" stroke="#3D3D3D" stroke-width="2.5"/>
+  <circle cx="448" cy="115" r="10" fill="#5D5D5D" stroke="#3D3D3D" stroke-width="2"/>
+  <!-- Face -->
+  <circle cx="408" cy="142" r="2.5" fill="#3D3D3D"/>
+  <path d="M405 158c4 3 10 3 14 0" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Neck -->
+  <line x1="420" y1="185" x2="420" y2="205" stroke="#3D3D3D" stroke-width="3"/>
+  <!-- Body (white top) -->
+  <path d="M380 205c0 0 10-3 40-3s40 3 40 3l10 90h-100z" fill="white" stroke="#3D3D3D" stroke-width="3"/>
+  <!-- Collar detail -->
+  <path d="M400 205l20 20l20-20" stroke="#3D3D3D" stroke-width="2" fill="none"/>
+  <!-- Arms holding clipboard -->
+  <path d="M385 225c-10 20-5 45 10 55" stroke="#3D3D3D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M455 225c5 15 10 35 0 50" stroke="#3D3D3D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Clipboard/notepad -->
+  <rect x="390" y="270" width="40" height="50" rx="3" fill="white" stroke="#3D3D3D" stroke-width="2.5"/>
+  <line x1="397" y1="282" x2="423" y2="282" stroke="#BDBDBD" stroke-width="1.5"/>
+  <line x1="397" y1="290" x2="420" y2="290" stroke="#BDBDBD" stroke-width="1.5"/>
+  <line x1="397" y1="298" x2="418" y2="298" stroke="#BDBDBD" stroke-width="1.5"/>
+  <!-- Pen in hand -->
+  <line x1="435" y1="270" x2="425" y2="300" stroke="#3D3D3D" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Legs -->
+  <path d="M380 305l-20 70h25l15-60" stroke="#3D3D3D" stroke-width="3" fill="none"/>
+  <path d="M460 305l20 70h-25l-15-60" stroke="#3D3D3D" stroke-width="3" fill="none"/>
+  <!-- Chair -->
+  <rect x="365" y="370" width="110" height="12" rx="3" fill="#C8C8C8" stroke="#3D3D3D" stroke-width="2.5"/>
+  <!-- Chair back -->
+  <path d="M470 370c8-50 10-100 5-150" stroke="#3D3D3D" stroke-width="3" fill="none"/>
+  <path d="M475 220c-3 0-8 2-8 8s5 8 8 8" stroke="#C8C8C8" stroke-width="8" fill="none"/>
+  <!-- Chair legs -->
+  <line x1="380" y1="382" x2="375" y2="420" stroke="#3D3D3D" stroke-width="3"/>
+  <line x1="470" y1="382" x2="475" y2="420" stroke="#3D3D3D" stroke-width="3"/>
+</svg>
