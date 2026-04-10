@@ -360,14 +360,13 @@ section {
   font-size: var(--fs-lg);
   font-style: italic;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-primary-dark);
   text-decoration: none;
   line-height: var(--lh-tight);
-  letter-spacing: 0.03em;
 }
 
 .site-logo a:hover {
-  color: var(--color-text-muted);
+  color: var(--color-primary);
 }
 
 .site-logo .tagline {
