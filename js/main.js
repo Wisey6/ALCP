@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initParallax();
   initFloatingElements();
-  initAuroraAnimation();
 });
 
 /* --- Sticky Header --- */
@@ -240,90 +239,4 @@ function initFloatingElements() {
     const delay = index * 0.1;
     el.style.animationDelay = `${delay}s`;
   });
-}
-
-/* --- Aurora Animation (Canvas-based) --- */
-function initAuroraAnimation() {
-  const canvas = document.getElementById('auroraAnimationCanvas');
-  const container = document.getElementById('auroraCanvas');
-
-  if (!canvas || !container) return;
-
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return;
-
-  // Warm color palette for aurora
-  const colors = [
-    { r: 44, g: 110, b: 113 },   // Teal
-    { r: 201, g: 123, b: 92 },   // Terracotta
-    { r: 232, g: 166, b: 137 },  // Light terracotta
-  ];
-
-  let time = 0;
-  let animationId = 0;
-
-  function resizeCanvas() {
-    const width = container.offsetWidth;
-    const height = container.offsetHeight;
-    canvas.width = width;
-    canvas.height = height;
-  }
-
-  function noise(x, y, t) {
-    return Math.sin(x * 0.01) * Math.cos(y * 0.01) * Math.sin(t * 0.001) +
-           Math.sin((x + t * 0.1) * 0.005) * 0.5;
-  }
-
-  function animate() {
-    animationId = requestAnimationFrame(animate);
-    time += 0.5;
-
-    const width = canvas.width;
-    const height = canvas.height;
-
-    // Clear with transparency
-    ctx.clearRect(0, 0, width, height);
-
-    // Draw flowing aurora waves
-    for (let wave = 0; wave < 3; wave++) {
-      const waveOffset = wave * 0.3;
-      const baseY = height * (0.3 + wave * 0.15);
-
-      ctx.beginPath();
-      ctx.moveTo(0, baseY);
-
-      for (let x = 0; x <= width; x += 5) {
-        const n = noise(x, baseY + waveOffset * 100, time);
-        const y = baseY + Math.sin((x + time * 0.05) * 0.01) * 40 + n * 30;
-        ctx.lineTo(x, y);
-      }
-
-      ctx.lineTo(width, height);
-      ctx.lineTo(0, height);
-      ctx.closePath();
-
-      const color = colors[(wave + Math.floor(time * 0.001)) % colors.length];
-      const alpha = 0.15 + 0.1 * Math.sin(time * 0.002 + wave);
-      ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`;
-      ctx.fill();
-    }
-
-    // Add glow effect
-    const gradient = ctx.createLinearGradient(0, 0, width, height);
-    gradient.addColorStop(0, 'rgba(44, 110, 113, 0.1)');
-    gradient.addColorStop(0.5, 'rgba(201, 123, 92, 0.05)');
-    gradient.addColorStop(1, 'rgba(232, 166, 137, 0.1)');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, width, height);
-  }
-
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas, { passive: true });
-  animate();
-
-  // Cleanup on page change (SPA scenario)
-  return () => {
-    cancelAnimationFrame(animationId);
-    window.removeEventListener('resize', resizeCanvas);
-  };
 }
