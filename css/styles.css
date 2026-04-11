@@ -1004,10 +1004,41 @@ section {
   overflow: hidden;
 }
 
+/* Ticket Tailor widget styles */
+#tix {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#tix iframe {
+  border-radius: 12px;
+}
+
 .booking-fallback {
   margin-top: var(--sp-3);
   font-size: var(--fs-sm);
   color: var(--color-text-muted);
+}
+
+.booking-info-box {
+  background-color: var(--color-white);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+  padding: var(--sp-4);
+  margin: var(--sp-6) auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+.booking-info-box h4 {
+  color: var(--color-primary);
+  margin-bottom: var(--sp-2);
+  font-size: var(--fs-md);
+}
+
+.booking-info-box ol li {
+  margin-bottom: var(--sp-2);
+  color: var(--color-text);
 }
 
 
