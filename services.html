@@ -44,7 +44,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero hero--short" aria-label="Services banner" style="background-color: var(--color-primary);">
+  <section class="hero hero--short" aria-label="Services banner" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
     <div class="hero__content">
       <h1 class="hero__title">Services</h1>
       <p class="hero__subtitle">Evidence-based support tailored to your individual needs</p>
@@ -132,45 +132,10 @@
 
           <div class="booking-section">
             <h3>Book EMDR Group Consultations</h3>
-            <p>2-hour EMDR Group Consultations are conducted approximately fortnightly. There is a limit of 4 people per group, enabling 30 minutes of focused individual attention. The full two hours can be counted towards your EMDR accreditation (a maximum of 5 hours out of the 10 hours required can be group consultation).</p>
-            <p style="color: var(--color-text-muted); font-size: var(--fs-sm);">If you have any questions, please don't hesitate to contact Rachael directly.</p>
+            <p>2-hour EMDR Group Consultations for up to 4 participants. Each participant receives 30 minutes of focused individual attention, and the full two hours count towards your EMDR accreditation (maximum 5 out of 10 hours required).</p>
 
-            <!--
-            ============================================================
-            CALENDLY + STRIPE SETUP INSTRUCTIONS
-            ============================================================
-
-            To enable online booking with payment:
-
-            1. CALENDLY SETUP:
-               a. Create a free or paid Calendly account at https://calendly.com
-               b. Create an Event Type called "EMDR Group Consultation"
-               c. Set duration to 2 hours, max invitees to 4
-               d. Copy your event URL (e.g., https://calendly.com/your-name/emdr-group-consultation)
-               e. Replace YOUR_CALENDLY_URL below with your actual URL
-
-            2. STRIPE INTEGRATION (via Calendly):
-               a. In your Calendly dashboard, go to: Integrations > Stripe
-               b. Click "Connect" and follow the prompts to link your Stripe account
-               c. Once connected, go to your EMDR Group Consultation event type
-               d. Under "Payment", enable "Collect payment" and set your price
-               e. Calendly will automatically collect payment when clients book
-               f. Payments go directly to your connected Stripe account
-
-            3. No additional Stripe code is needed on this website.
-               Calendly handles the entire booking + payment flow.
-
-            4. To test: Replace the URL below and the widget will appear.
-               The fallback button also links to your Calendly page directly.
-            ============================================================
-            -->
-
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/rachael-alcp/group-emdr-session?hide_event_type_details=1&hide_gdpr_banner=1&background_color=25a035&text_color=fffdfd&primary_color=ffffff" style="min-width:320px;height:700px;"></div>
-            <!-- Calendly inline widget end -->
-
-            <div class="booking-fallback">
-              <p>Having trouble viewing the scheduler? <a href="https://calendly.com/rachael-alcp/group-emdr-session" target="_blank" rel="noopener" class="btn btn--accent" style="margin-top: var(--sp-2); display: inline-flex;">Book on Calendly</a></p>
+            <div style="margin-top: var(--sp-6);">
+              <a href="#" class="btn btn--primary">Book an EMDR Group Session</a>
             </div>
 
           </div>
@@ -223,8 +188,6 @@
     </div>
   </footer>
 
-  <!-- Calendly widget script -->
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="js/main.js"></script>
 </body>
 </html>

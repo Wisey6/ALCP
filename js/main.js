@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initActiveNavLink();
   initContactForm();
+  initParallax();
+  initFloatingElements();
 });
 
 /* --- Sticky Header --- */
@@ -197,4 +199,44 @@ function initContactForm() {
 
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+/* --- Parallax Scrolling (Premium Effect) --- */
+function initParallax() {
+  const heroes = document.querySelectorAll('.hero');
+  if (!heroes.length) return;
+
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  window.addEventListener('scroll', () => {
+    heroes.forEach(hero => {
+      const rect = hero.getBoundingClientRect();
+      const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+
+      if (scrollPercent > -0.5 && scrollPercent < 1.5) {
+        const yOffset = scrollPercent * 40 - 20; // 20% parallax movement
+        const bg = hero.querySelector('.hero__bg');
+        if (bg) {
+          bg.style.transform = `translateY(${yOffset * 0.2}px)`;
+        }
+      }
+    });
+  }, { passive: true });
+}
+
+/* --- Floating Elements Animation --- */
+function initFloatingElements() {
+  const floatingElements = document.querySelectorAll('[data-float]');
+  if (!floatingElements.length) return;
+
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+
+  floatingElements.forEach((el, index) => {
+    const delay = index * 0.1;
+    el.style.animationDelay = `${delay}s`;
+  });
 }
