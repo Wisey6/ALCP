@@ -1327,7 +1327,8 @@ section {
 .img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   transition: transform var(--transition-slow);
 }
 
@@ -1724,6 +1725,16 @@ section:not(:last-child)::after {
 
   .nav-overlay.open {
     display: block;
+  }
+
+  .img-wrapper--tall {
+    height: auto;
+    max-height: 500px;
+  }
+
+  .img-wrapper--medium {
+    height: auto;
+    max-height: 400px;
   }
 
   .footer-inner {
