@@ -109,6 +109,11 @@
 
           <!-- CONTACT FORM -->
           <div class="fade-in-right">
+            <div id="form-success" class="form-success" role="status" style="display: none; color: var(--color-primary); padding: var(--sp-4); background: #f0f8f7; border-radius: 8px; margin-bottom: var(--sp-4); border: 1px solid var(--color-primary);">
+              <strong>Thanks for your message!</strong><br>
+              Rachael will get back to you as soon as possible.
+            </div>
+
             <form id="contact-form" class="contact-form" action="https://formsubmit.co/tyler6wise@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="New contact form submission from alcp.com.au">
               <input type="hidden" name="_next" value="https://alcp.com.au/contact.html?sent=1">
@@ -186,5 +191,22 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Show thank-you message after form submission redirects back with ?sent=1
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('sent') === '1') {
+        var successEl = document.getElementById('form-success');
+        var formEl = document.getElementById('contact-form');
+        if (successEl) {
+          successEl.style.display = 'block';
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        if (formEl) {
+          formEl.reset();
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
