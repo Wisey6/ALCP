@@ -10,7 +10,7 @@
       var submitBtn = document.getElementById('contact-submit');
       if (!form) return;
 
-      var endpoint = 'https://formsubmit.co/ajax/rachael@alcp.com.au';
+      var endpoint = 'https://formsubmit.co/ajax/38a4479fbdf10b98c1cb68192f78213d';
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
