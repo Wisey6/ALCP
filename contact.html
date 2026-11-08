@@ -1,15 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://formsubmit.co; frame-src https://www.google.com; object-src 'none'; base-uri 'none'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Rachael Ambler at Abundant Life Clinical Psychology — 1357 Logan Road, Mt Gravatt, Brisbane. Phone: 0412 465 038.">
-  <title>Contact | Abundant Life Clinical Psychology</title>
+  <meta name="description" content="Contact Abundant Life Clinical Psychology at 1357 Logan Road, Mount Gravatt, Brisbane QLD 4122. Call 0412 465 038 for appointments and enquiries.">
+  <title>Contact Rachael Ambler | Psychologist in Mount Gravatt, Brisbane</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+<link rel="canonical" href="https://alcp.com.au/contact.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:title" content="Contact Rachael Ambler | Psychologist in Mount Gravatt, Brisbane">
+<meta property="og:description" content="Contact Abundant Life Clinical Psychology at 1357 Logan Road, Mount Gravatt, Brisbane QLD 4122. Call 0412 465 038 for appointments and enquiries.">
+<meta property="og:url" content="https://alcp.com.au/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_AU">
+<meta property="og:site_name" content="Abundant Life Clinical Psychology">
+<meta property="og:image" content="https://alcp.com.au/images/Photo.jpg">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://alcp.com.au/#practice",
+      "name": "Abundant Life Clinical Psychology",
+      "alternateName": "ALCP",
+      "url": "https://alcp.com.au/",
+      "telephone": "+61412465038",
+      "email": "rachael@alcp.com.au",
+      "image": "https://alcp.com.au/images/Photo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1357 Logan Road",
+        "addressLocality": "Mount Gravatt",
+        "addressRegion": "QLD",
+        "postalCode": "4122",
+        "addressCountry": "AU"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Brisbane"
+      },
+      "employee": {
+        "@id": "https://alcp.com.au/#rachael-ambler"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alcp.com.au/#rachael-ambler",
+      "name": "Rachael Ambler",
+      "jobTitle": "Clinical Psychologist",
+      "url": "https://alcp.com.au/#welcome",
+      "image": "https://alcp.com.au/images/Photo.jpg",
+      "worksFor": {
+        "@id": "https://alcp.com.au/#practice"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alcp.com.au/#website",
+      "url": "https://alcp.com.au/",
+      "name": "Abundant Life Clinical Psychology",
+      "publisher": {
+        "@id": "https://alcp.com.au/#practice"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alcp.com.au/contact.html#webpage",
+      "url": "https://alcp.com.au/contact.html",
+      "name": "Contact Rachael Ambler | Psychologist in Mount Gravatt, Brisbane",
+      "description": "Contact Abundant Life Clinical Psychology at 1357 Logan Road, Mount Gravatt, Brisbane QLD 4122. Call 0412 465 038 for appointments and enquiries.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://alcp.com.au/#website"
+      },
+      "about": {
+        "@id": "https://alcp.com.au/#practice"
+      }
+    }
+  ]
+}</script>
+<noscript><style>.fade-in, .fade-in-left, .fade-in-right { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
 
@@ -118,7 +194,8 @@
               <span id="form-error-message">Please try again, or email <a href="mailto:rachael@alcp.com.au">rachael@alcp.com.au</a> directly.</span>
             </div>
 
-            <form id="contact-form" class="contact-form">
+            <p id="contact-privacy" class="text-muted">This form sends your name, email and message to Rachael through FormSubmit, a third-party email service. Please use it for general enquiries and avoid including sensitive health information. You can also call <a href="tel:0412465038">0412 465 038</a> to discuss an appointment.</p>
+            <form id="contact-form" class="contact-form" method="post" action="https://formsubmit.co/rachael@alcp.com.au" aria-describedby="contact-privacy">
               <div class="form-group">
                 <label for="name">Name <span style="color: #c44;">*</span></label>
                 <input type="text" id="name" name="name" required autocomplete="name">
@@ -192,75 +269,6 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    // Contact form submission via FormSubmit AJAX endpoint.
-    // Submissions are emailed to rachael@alcp.com.au. First submission from this
-    // site will trigger a one-time activation email from FormSubmit that must be
-    // confirmed before deliveries start.
-    (function () {
-      var form = document.getElementById('contact-form');
-      var successEl = document.getElementById('form-success');
-      var errorEl = document.getElementById('form-error');
-      var errorMsg = document.getElementById('form-error-message');
-      var submitBtn = document.getElementById('contact-submit');
-      if (!form) return;
-
-      var endpoint = 'https://formsubmit.co/ajax/rachael@alcp.com.au';
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        successEl.style.display = 'none';
-        errorEl.style.display = 'none';
-        submitBtn.disabled = true;
-        var originalLabel = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-
-        var data = {
-          name: form.name.value,
-          email: form.email.value,
-          subject: form.subject.value,
-          message: form.message.value,
-          _subject: 'New contact form submission from alcp.com.au',
-          _captcha: 'false',
-          _template: 'box'
-        };
-
-        fetch(endpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-          .then(function (res) {
-            return res.json().catch(function () { return {}; }).then(function (body) {
-              return { ok: res.ok, body: body };
-            });
-          })
-          .then(function (result) {
-            if (result.ok && result.body && (result.body.success === 'true' || result.body.success === true)) {
-              form.reset();
-              successEl.style.display = 'block';
-              successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } else {
-              var msg = (result.body && result.body.message) ? result.body.message : 'Please try again, or email rachael@alcp.com.au directly.';
-              errorMsg.textContent = msg;
-              errorEl.style.display = 'block';
-              errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-          })
-          .catch(function () {
-            errorMsg.textContent = 'Network error. Please try again, or email rachael@alcp.com.au directly.';
-            errorEl.style.display = 'block';
-            errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          })
-          .then(function () {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalLabel;
-          });
-      });
-    })();
-  </script>
+  <script src="js/contact.js" defer></script>
 </body>
 </html>

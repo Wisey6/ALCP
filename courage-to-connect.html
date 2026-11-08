@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://formsubmit.co; frame-src https://www.google.com; object-src 'none'; base-uri 'none'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Courage to Connect | Group Retreat Program</title>
-<meta name="description" content="Courage to Connect is a small therapeutic group program for healing complex trauma through connection and relationships, facilitated by clinical psychologist Rachael Ambler. Weekly sessions from 3 February 2027 and a two-night retreat, 19-21 March 2027.">
-<meta property="og:title" content="Courage to Connect | Group Retreat Program">
-<meta property="og:description" content="Healing complex trauma through connection and relationships. Weekly group sessions and a two-night retreat in the Gold Coast Hinterland.">
-<meta property="og:type" content="website">
+<title>Courage to Connect | Group Therapy in Brisbane | ALCP</title>
+<meta name="description" content="Courage to Connect with Rachael Ambler: six group sessions in Mount Gravatt, Brisbane from 3 February 2027, plus a Gold Coast Hinterland retreat on 19–21 March.">
 <style>
 :root{color-scheme:light}
 html{-webkit-text-size-adjust:100%}
@@ -308,6 +306,94 @@ footer .script { font-size: 1.6rem; font-style: italic; }
 .alcp-return .btn { gap: 8px; }
 @media (max-width: 480px) { .alcp-return { padding-inline: 16px; } }
 </style>
+<link rel="canonical" href="https://alcp.com.au/courage-to-connect.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:title" content="Courage to Connect | Group Therapy in Brisbane | ALCP">
+<meta property="og:description" content="Courage to Connect with Rachael Ambler: six group sessions in Mount Gravatt, Brisbane from 3 February 2027, plus a Gold Coast Hinterland retreat on 19–21 March.">
+<meta property="og:url" content="https://alcp.com.au/courage-to-connect.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_AU">
+<meta property="og:site_name" content="Abundant Life Clinical Psychology">
+<meta property="og:image" content="https://alcp.com.au/images/courage-to-connect.jpg">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://alcp.com.au/#practice",
+      "name": "Abundant Life Clinical Psychology",
+      "alternateName": "ALCP",
+      "url": "https://alcp.com.au/",
+      "telephone": "+61412465038",
+      "email": "rachael@alcp.com.au",
+      "image": "https://alcp.com.au/images/Photo.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1357 Logan Road",
+        "addressLocality": "Mount Gravatt",
+        "addressRegion": "QLD",
+        "postalCode": "4122",
+        "addressCountry": "AU"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Brisbane"
+      },
+      "employee": {
+        "@id": "https://alcp.com.au/#rachael-ambler"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alcp.com.au/#rachael-ambler",
+      "name": "Rachael Ambler",
+      "jobTitle": "Clinical Psychologist",
+      "url": "https://alcp.com.au/#welcome",
+      "image": "https://alcp.com.au/images/Photo.jpg",
+      "worksFor": {
+        "@id": "https://alcp.com.au/#practice"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alcp.com.au/#website",
+      "url": "https://alcp.com.au/",
+      "name": "Abundant Life Clinical Psychology",
+      "publisher": {
+        "@id": "https://alcp.com.au/#practice"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alcp.com.au/courage-to-connect.html#webpage",
+      "url": "https://alcp.com.au/courage-to-connect.html",
+      "name": "Courage to Connect | Group Therapy in Brisbane | ALCP",
+      "description": "Courage to Connect with Rachael Ambler: six group sessions in Mount Gravatt, Brisbane from 3 February 2027, plus a Gold Coast Hinterland retreat on 19–21 March.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://alcp.com.au/#website"
+      },
+      "about": {
+        "@id": "https://alcp.com.au/#practice"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://alcp.com.au/courage-to-connect.html#program",
+      "name": "Courage to Connect",
+      "serviceType": "Therapeutic group program",
+      "provider": {
+        "@id": "https://alcp.com.au/#practice"
+      },
+      "url": "https://alcp.com.au/courage-to-connect.html",
+      "areaServed": {
+        "@type": "City",
+        "name": "Brisbane"
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -578,25 +664,7 @@ footer .script { font-size: 1.6rem; font-style: italic; }
   </div>
 </footer>
 
-<script>
-document.querySelectorAll('[data-copy]').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    var label = btn.textContent;
-    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = label; }, 1800); }
-    function fallback() {
-      try {
-        var el = document.getElementById(btn.dataset.target);
-        var range = document.createRange(); range.selectNodeContents(el);
-        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
-        done('Selected');
-      } catch (e) { done('Copy manually'); }
-    }
-    try {
-      navigator.clipboard.writeText(btn.dataset.copy).then(function () { done('Copied'); }, fallback);
-    } catch (e) { fallback(); }
-  });
-});
-</script>
+<script src="js/program-contact.js" defer></script>
 
 </body>
 </html>

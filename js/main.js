@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initScrollAnimations();
   initActiveNavLink();
-  initContactForm();
   initParallax();
   initFloatingElements();
 });
@@ -151,54 +150,6 @@ function initActiveNavLink() {
       link.classList.add('active');
     }
   });
-}
-
-/* --- Contact Form --- */
-function initContactForm() {
-  const form = document.querySelector('.contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Basic validation
-    const name = form.querySelector('[name="name"]');
-    const email = form.querySelector('[name="email"]');
-    const message = form.querySelector('[name="message"]');
-
-    let valid = true;
-
-    [name, email, message].forEach(field => {
-      if (field && !field.value.trim()) {
-        field.style.borderColor = '#c44';
-        valid = false;
-      } else if (field) {
-        field.style.borderColor = '';
-      }
-    });
-
-    if (email && email.value && !isValidEmail(email.value)) {
-      email.style.borderColor = '#c44';
-      valid = false;
-    }
-
-    if (valid) {
-      const successMsg = form.querySelector('.form-success');
-      if (successMsg) {
-        successMsg.classList.add('show');
-      }
-      form.reset();
-
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        if (successMsg) successMsg.classList.remove('show');
-      }, 5000);
-    }
-  });
-}
-
-function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 /* --- Parallax Scrolling (Premium Effect) --- */
