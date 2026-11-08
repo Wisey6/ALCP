@@ -1673,6 +1673,89 @@ section:not(:last-child)::after {
     transform: none;
   }
 
+  .img-wrapper--tall {
+    height: auto;
+    max-height: 500px;
+  }
+
+  .img-wrapper--medium {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero--short {
+    min-height: 35vh;
+  }
+
+  .img-wrapper--tall {
+    height: 300px;
+  }
+
+  .img-wrapper--medium {
+    height: 250px;
+  }
+
+  .highlight-banner {
+    padding: var(--sp-6) var(--sp-4);
+  }
+
+  .booking-section {
+    padding: var(--sp-4);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-hero: 1.875rem;
+  }
+
+  .container {
+    padding: 0 var(--sp-2);
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Courage to Connect — uses ALCP's shared palette, type and button styles. */
+#group-therapy { scroll-margin-top: calc(var(--header-height) + var(--sp-3)); }
+.retreat-feature { display: grid; grid-template-columns: 1.4fr 1fr; overflow: hidden; margin-bottom: var(--sp-6); border: 1px solid var(--color-border); border-radius: 24px; background: var(--color-bg); box-shadow: var(--shadow-sm); }
+.retreat-feature__intro { padding: var(--sp-6); }
+.retreat-feature h2 { margin-bottom: var(--sp-2); color: var(--color-primary-dark); }
+.retreat-feature__eyebrow { display: block; margin-bottom: var(--sp-2); color: var(--color-primary); font-size: var(--fs-xs); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.retreat-feature__subtitle { font-family: var(--font-heading); font-size: var(--fs-lg); font-style: italic; color: var(--color-text-muted); }
+.retreat-feature__link { gap: var(--sp-2); margin-top: var(--sp-1); }
+.retreat-feature__link:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 4px; }
+.retreat-feature__dates { display: grid; align-content: center; gap: var(--sp-3); padding: var(--sp-6); background: #edf0e8; }
+.retreat-feature__dates .retreat-feature__eyebrow { margin: 0; }
+.retreat-feature__dates div { display: grid; gap: var(--sp-1); padding-top: var(--sp-3); border-top: 1px solid var(--color-border); }
+.retreat-feature__dates span { font-size: var(--fs-sm); }
+.retreat-feature__dates strong { font-family: var(--font-heading); font-size: var(--fs-xl); line-height: var(--lh-tight); color: var(--color-primary-dark); }
+@media (max-width: 768px) {
+  .retreat-feature { grid-template-columns: 1fr; }
+  .retreat-feature__intro, .retreat-feature__dates { padding: var(--sp-3); }
+  .retreat-feature__link { padding: var(--sp-2); font-size: var(--fs-xs); }
+}
+
+/* Calm interactions for the program teaser, consistent with its detail page. */
+.retreat-feature__link { min-height: 50px; background: var(--color-primary); box-shadow: none; transition: background-color 180ms ease, transform 220ms ease; }
+@media (hover: hover) and (pointer: fine) { .retreat-feature__link:hover { background: var(--color-primary-dark); box-shadow: var(--shadow-sm); transform: translateY(-2px); } }
+.retreat-feature__link:active { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .retreat-feature__link { transition: none; } .retreat-feature__link:hover { transform: none; } }
+
+/* Switch to the compact menu before tablet navigation becomes crowded. */
+@media (max-width: 1100px) {
   /* Mobile nav */
   .nav-links {
     position: fixed;
@@ -1727,57 +1810,13 @@ section:not(:last-child)::after {
     display: block;
   }
 
-  .img-wrapper--tall {
-    height: auto;
-    max-height: 500px;
-  }
-
-  .img-wrapper--medium {
-    height: auto;
-    max-height: 400px;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: var(--sp-4);
-  }
-
-  .hero {
-    min-height: 80vh;
-  }
-
-  .hero--short {
-    min-height: 35vh;
-  }
-
-  .img-wrapper--tall {
-    height: 300px;
-  }
-
-  .img-wrapper--medium {
-    height: 250px;
-  }
-
-  .highlight-banner {
-    padding: var(--sp-6) var(--sp-4);
-  }
-
-  .booking-section {
-    padding: var(--sp-4);
-  }
 }
-
 @media (max-width: 480px) {
-  :root {
-    --fs-hero: 1.875rem;
-  }
-
-  .container {
-    padding: 0 var(--sp-2);
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
+  .site-header .header-inner { gap: 16px; }
+  .site-header .site-logo a { display: block; max-width: 240px; font-size: 1rem; }
+  .site-header .tagline { display: none; }
+  .hamburger { flex-shrink: 0; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+}
+@media (max-width: 1100px) {
+  .hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
 }

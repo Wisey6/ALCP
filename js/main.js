@@ -66,7 +66,7 @@ function initMobileNav() {
   // Close on nav link click (mobile)
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 1100) {
         hamburger.classList.remove('active');
         navLinks.classList.remove('open');
         if (overlay) overlay.classList.remove('open');
